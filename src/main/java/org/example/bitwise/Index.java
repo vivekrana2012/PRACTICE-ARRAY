@@ -5,6 +5,13 @@ public class Index {
     public static void main(String[] args) {
 
         int a = 12;
+        int num = 7;
+
+        System.out.println("complement of " + num + " = " + ~num);
+        System.out.println("2's complement of " + num + " = " + (~num + 1));
+
+        swap(1, 5);
+        swap(4, 9);
 
         System.out.println("IsEven - " + isEven(a));
         System.out.println("IsEven - " + isEven(7));
@@ -19,6 +26,17 @@ public class Index {
         if (leftShift(a, 1) == (a << 1)) {
             System.out.println("Left Shift works!!");
         }
+    }
+
+    private static void swap(int a, int b) {
+
+        System.out.println("a - " + a + ", b - " + b);
+
+        a = a ^ b;
+        b = a ^ b;
+        a = a ^ b;
+
+        System.out.println("swapped: a - " + a + ", b - " + b);
     }
 
     private static boolean isEven(int number) {
